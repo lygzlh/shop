@@ -1,0 +1,27 @@
+.pro_div{
+	height:40px;
+	width:880px;
+	position:relative;
+}
+
+.pro_left{
+	position:absolute;
+	left:150px;
+}
+
+.pro_right{
+	position:absolute;
+	left:550px;
+	
+}
+
+.pro_left span{
+	display:inline-block;
+	width:80px;
+	text-align:left;
+}
+.pro_right span{
+	display:inline-block;
+	width:80px;
+	text-align:left;
+}

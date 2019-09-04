@@ -1,0 +1,75 @@
+#top{
+	width:1500px;
+	height:150px;
+	margin:0 auto;
+}
+
+.top_image{
+	width:240px;
+	height:150px;
+	margin-left:10px;
+}
+
+#middle{
+	width: 1500px;
+	height:600px;
+	margin: 0 auto;
+	z-index:1;
+}
+
+.login_frame{
+	width:400px;
+	height:300px;
+	background-color:white;
+	position:relative;
+	top:50px;
+	left: 1000px;
+	z-index:9;
+}
+
+.login_info{
+	position:absolute;
+	top:30px;
+	left:50px;
+}
+
+.login_info label{
+	width:80px;
+	display:inline-block;
+	text-align:right;
+	padding-left: 5px;
+}
+
+.tsls{
+    font-weight: bolder;
+}
+
+.back{
+	background-color:#f5deb3;
+	width: 100%;
+	height:600px;
+}
+
+.btns {
+    height: 36px;
+    padding: 0 20px;
+    color: #FFF;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+    background: #ff0036;
+    border: 0;
+    border-radius: 3px;
+    margin-left: 60px;
+    margin-top: 20px;
+}
+
+.btn-large {
+    min-width: 140px;
+}
+
+.register_button{
+	font:12px/1.5 "Microsoft YaHei",tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif;
+	margin-left:200px;
+	color:#6c6c6c;
+}

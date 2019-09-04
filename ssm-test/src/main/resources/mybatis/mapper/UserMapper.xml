@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "mybatis-3-mapper.dtd">
+<mapper namespace="com.hwrky.shop.dao.UserMapper">
+    <resultMap id="userMap" type="user">
+        <id property="user_id" column="user_id"/>
+        <result property="user_name" column="user_name"/>
+        <result property="user_nickname" column="user_nickname"/>
+        <result property="user_password" column="user_password"/>
+        <result property="user_realname" column="user_realname"/>
+        <result property="user_gender" column="user_gender"/>
+        <result property="user_birthday" column="user_birthday"/>
+        <result property="user_profile_picture_src" column="user_profile_picture_src"/>
+        <association property="user_address" javaType="com.hwrky.shop.entity.Address">
+            <id property="address_areaId" column="user_address"/>
+        </association>
+        <association property="user_homeplace" javaType="com.hwrky.shop.entity.Address">
+            <id property="address_areaId" column="user_homeplace"/>
+        </association>
+    </resultMap>
+
+    <insert id="insertOne" parameterType="user">
+      <!--
+        INSERT INTO user(user_id,user_name,user_nickname,user_password,user_realname,user_gender,user_birthday)
+            VALUES (
+            null,
+            #{user.user_name},
+            #{user.user_nickname},
+            #{user.user_password},
+            #{user.user_realname},
+            #{user.user_gender},
+            #{user.user_birthday},
+            #{user.user_profile_picture_src},
+            #{user.user_address.address_areaId},
+            #{user.user_homeplace.address_areaId})
+    </insert>
+	-->
+	    INSERT INTO user(user_id,user_name,user_password,user_nickname,user_gender,user_birthday)
+            VALUES (
+            null,
+            #{user.user_name},
+            #{user.user_password},
+            #{user.user_nickname},
+            #{user.user_gender},
+            #{user.user_birthday})
+   		</insert>
+   		
+   		<select id="select" resultMap="userMap">
+        <!--  SELECT user_id,user_name,user_nickname,user_password,user_realname,user_gender,user_birthday,user_profile_picture_src,user_address,user_homeplace FROM user-->
+        SELECT user_id,user_name,user_password,user_nickname,user_gender,user_birthday FROM user
+        <where>
+            user_name = #{user_name} and user_password = #{user_password}
+        </where>
+    	</select>
+   		
+   		<select id="selectAll" resultMap="userMap">
+        <!--  SELECT user_id,user_name,user_nickname,user_password,user_realname,user_gender,user_birthday,user_profile_picture_src,user_address,user_homeplace FROM user-->
+        SELECT user_id,user_name,user_password,user_nickname,user_gender,user_birthday FROM user
+    	</select>
+    	
+    	<select id="selectUser" resultMap="userMap">
+        <!--  SELECT user_id,user_name,user_nickname,user_password,user_realname,user_gender,user_birthday,user_profile_picture_src,user_address,user_homeplace FROM user-->
+        SELECT user_id,user_name,user_password,user_nickname,user_gender,user_birthday FROM user
+    	<where>
+    		<if test="user_name != null">
+    			(user_name LIKE concat('%',#{user_name},'%') or user_nickname LIKE concat('%',#{user_name},'%'))
+    		</if>
+    	    <if test="user_gender != null">
+                    and user_gender = #{user_gender}
+            </if>
+    	</where>
+    	</select>
+</mapper>

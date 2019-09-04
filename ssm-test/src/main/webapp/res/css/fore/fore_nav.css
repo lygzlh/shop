@@ -1,0 +1,145 @@
+/*首页*/
+#nav {
+    width: auto;
+    height: 32px;
+    font-family: "Microsoft YaHei UI", Tahoma, serif;
+    font-size: 12px;
+    position: relative !important;
+    background: #f8f8f8;
+    z-index: 999;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.nav_main {
+    width: 998px;
+    margin: auto;
+    height: 100%;
+    position: relative;
+
+}
+
+
+.nav_main a {
+    color: #999;
+    padding-left: 20px;
+    line-height:32px;
+}
+
+.nav_main .userName {
+    padding: 0;
+}
+
+.nav_main a:hover {
+    color: #ff335e;
+    text-decoration: none;
+}
+
+.nav_main > #container_login {
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 32px;
+    color: #999;
+    margin: 16px;
+}
+
+#container_login > em {
+    font-style: normal;
+}
+
+.p_left{
+	float:left;
+}
+
+.p_right{
+	float:right;
+}
+
+.img_size{
+	width:270px;
+	height:150px;
+}
+.search{
+	width: 340px;
+	height:21px;
+	margin-top:43px;
+	margin-left: 20px;
+}
+
+.commodity{
+	width: 193.2px;
+	height:268.2px;
+	margin-left:4px;
+	margin-top:10px;
+	border:1px solid gray;
+	background-color: white;
+	border-radius:8px;
+}
+.shop_img_size{
+	width: 180px;
+	height:180px;
+	margin-left:6.6px;
+	margin-top:-32px;
+
+}
+.pbtn{
+	width: 190px;
+	height:47px;
+	margin-top:8px;
+ 	border-top:1px dashed red;
+}
+
+.price{
+	width: 95px;
+	height:27.6px;
+	display:inline-block;
+	margin-top:9.7px;
+	margin-left:9.7px;
+}
+.title{
+		overflow: hidden; /*自动隐藏文字*/
+		text-overflow: ellipsis;/*文字隐藏后添加省略号*/
+		white-space: nowrap;/*强制不换行*/
+		width: 20em;/*不允许出现半汉字截断*/
+		width:190px;
+		color:black;
+		font:12px/150% tahoma,arial,Microsoft YaHei,Hiragino Sans GB,"\u5b8b\u4f53",sans-serif;
+}
+.price_size{
+	font-size:20px;
+	color:red;
+}
+.buy_size{
+	margin-top:-11px;
+	width: 68px;
+	height:27px;
+	padding:1px 6px;
+	width: 60px;
+	margin-left:5px;
+	font: bold 14px/20px "微软雅黑";
+	color: #fff;
+}
+.condition{
+	width: 68px;
+	height:27px;
+	padding-left: 10px!important;
+	color:black;
+}
+
+.tlss{
+	width: 98px;
+	height:27px;
+	font-size:20px;
+	font-family:'Microsoft YaHei';
+	color:black;
+	display:inline-block;
+	text-align:center;
+}
+
+.border_con{
+	border-left:2px solid red;
+	border-right:2px solid red;
+	border-top:2px solid red;
+	background-color:#f8f8f8;
+	font-weight:700;
+}
